@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+        "redis": "",
+        "nodemon": ""
+    },
+    "scripts": {
+        "start": "npm index.js",
+        "dev": "nodemon"
+    }
+}
