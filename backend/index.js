@@ -34,7 +34,7 @@ const redisPublisher = redisClient.duplicate();
 
 // Express route handler
 app.get('/', (req, res) => {
-    res.send('Hi');
+    return res.send('Hi');
 });
 app.get('/values/all', async(req, res) => {
     const values = await pgClient.query('SELECT * FROM values');
