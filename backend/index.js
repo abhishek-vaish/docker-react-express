@@ -11,7 +11,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //Postgres client setup - SQL type database
-const { Pool } = require('pg');
 const pgClient = new Pool({
     user: key.pgUser,
     host: key.pgHost,
