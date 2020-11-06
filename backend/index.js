@@ -1,4 +1,4 @@
-const keys = require('./keys');
+const keys = require('./key');
 
 // Express App Setup
 const express = require('express');
