@@ -1,0 +1,37 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinations": [
+        {
+            "name": "client",
+            "image": "abhishekv5055/multi-client",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name": "backend",
+            "image": "abhishekv5055/multi-backend",
+            "hostname": "backend",
+            "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "abhishekv5055/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "abhishekv5055/multi-nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "portMapping": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["client", "backend"]
+        }
+        
+    ]
+}
