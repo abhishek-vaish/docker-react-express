@@ -5,19 +5,24 @@
             "name": "client",
             "image": "abhishekv5055/multi-client",
             "hostname": "client",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "backend",
             "image": "abhishekv5055/multi-server",
             "hostname": "backend",
-            "essential": false
+            "essential": false,
+            "memory": 128
+
         },
         {
             "name": "worker",
             "image": "abhishekv5055/multi-worker",
             "hostname": "worker",
-            "essential": false
+            "essential": false,
+            "memory": 128
+
         },
         {
             "name": "nginx",
@@ -30,7 +35,9 @@
                     "containerPort": 80
                 }
             ],
-            "links": ["client", "backend"]
+            "links": ["client", "backend"],
+            "memory": 128
+
         }
         
     ]
