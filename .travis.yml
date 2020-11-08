@@ -19,3 +19,16 @@ after_success:
     - docker push abhishekv5055/multi-server
     - docker push abhishekv5055/multi-worker
     - docker push abhishekv5055/multi-nginx
+
+deploy:
+    provider: elasticbeanstalk
+    region: ap-south-1
+    app: multi-container-docker
+    enviornment: MultiContainerDocker-env
+    bucket_name: elasticbeanstalk-ap-south-1-776214941486
+    bucket_path: docker_multi
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_key_id:
+        secure: $AWS_SECRET_KEY

@@ -9,7 +9,7 @@
         },
         {
             "name": "backend",
-            "image": "abhishekv5055/multi-backend",
+            "image": "abhishekv5055/multi-server",
             "hostname": "backend",
             "essential": false
         },
