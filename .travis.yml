@@ -21,12 +21,13 @@ after_success:
     - docker push abhishekv5055/multi-nginx
 
 deploy:
+    skip_cleanup: true
     provider: elasticbeanstalk
-    region: ap-south-1
-    app: multi-container-docker
-    enviornment: MultiContainerDocker-env
-    bucket_name: elasticbeanstalk-ap-south-1-776214941486
-    bucket_path: docker_multi
+    region: "ap-south-1"
+    app: "multi-container-docker"
+    enviornment: "MultiContainerDocker-env"
+    bucket_name: "elasticbeanstalk-ap-south-1-776214941486"
+    bucket_path: "docker-multi"
     on:
         branch: master
     access_key_id: $AWS_ACCESS_KEY
