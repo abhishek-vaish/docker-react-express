@@ -21,6 +21,7 @@ after_success:
     - docker push abhishekv5055/multi-nginx
 
 deploy:
+    skip_cleanup: true
     provider: elasticbeanstalk
     region: "ap-south-1"
     app: "multi-container-docker"
